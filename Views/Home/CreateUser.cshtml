@@ -1,0 +1,28 @@
+﻿
+@{
+	ViewBag.Title = "SingUp";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SingUp</title>
+	<link rel="stylesheet" href="/static/master.css">
+</head>
+<body>
+	<div class="login-box">
+		<img src="~/Images/LogIn/UserID.png" class="avatar" alt="Avatar Image">
+		<h1>SingUp</h1>
+		<form method="post" action="/Home/CreateUser">
+			<!-- USERNAME INPUT -->
+			<label for="username">Username</label>
+			<input type="text" placeholder="Enter Username" name="Username1" id="Username1">
+			<!-- PASSWORD INPUT -->
+			<label for="password">Password</label>
+			<input type="password" placeholder="Enter Password" name="Password1" id="Password1">
+			<input type="submit" value="Create">
+		</form>
+	</div>
+</body>
+</html>

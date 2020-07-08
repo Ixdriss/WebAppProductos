@@ -1,0 +1,43 @@
+﻿@model WebApplication1.Models.Product
+@{
+	ViewBag.Title = "UpdateProduct";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Edit Product</title>
+	<link rel="stylesheet" href="/static/master2.css">
+</head>
+<body>
+	<div class="login-box">
+		<h1>Edit Product</h1>
+		<form method="post" action="/Product/UpdateProduct">
+
+			<label for="name">Product ID</label>
+			<input type="text" placeholder="Enter ID" value=@Model.id_Product name="idProduct" id="idProduct" readonly >
+
+			<label for="name">Product Name</label>
+			<input type="text" placeholder="Enter name" value=@Model.name_Product name="nameProduct" id="nameProduct">
+
+			<label for="price">Price</label>
+			<input type="text" placeholder="Enter price" value=@Model.price_Product name="priceProduct" id="priceProduct">
+
+			<label for="categorie">Categorie</label>
+			<select id "categorieList" name="categorieList">
+				<option value="@Model.categorie_Product">@Model.categorie_Product</option>
+				<option value="Fuit">Fruit</option>
+				<option value="Fuit">Vegetable</option>
+				<option value="Fuit">Meat</option>
+			</select>
+			
+
+			<label for="image">Image</label>
+			<input type="file" placeholder="Select Image" name="imageProduct" id="imageProduct">
+			<input type="submit" value="Edit">
+			<a href="/Product/ShowProducts">Back</a>
+		</form>
+	</div>
+</body>
+</html>

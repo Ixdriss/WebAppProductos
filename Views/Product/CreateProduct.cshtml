@@ -1,0 +1,40 @@
+﻿
+@{
+	ViewBag.Title = "CreateProduct";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>New Product</title>
+	<link rel="stylesheet" href="/static/master2.css">
+</head>
+<body>
+	<div class="login-box">
+		<h1>New Product</h1>
+		<form method="post" action="/Product/CreateProduct">
+
+			<label for="name">Product ID</label>
+			<input type="text" placeholder="Enter ID" value="0"name="idProduct" id="idProduct" disabled>
+
+			<label for="name">Product Name</label>
+			<input type="text" placeholder="Enter name" name="nameProduct" id="nameProduct">
+
+			<label for="price">Price</label>
+			<input type="text" placeholder="Enter price" name="priceProduct" id="priceProduct">
+
+			<label for="categorie">Categorie</label>
+			<select id "categorieList" name="categorieList">
+				<option value="Fuit">Fruit</option>
+				<option value="Vegetable">Vegetable</option>
+				<option value="Meat">Meat</option>
+			</select>
+
+				<label for="image">Image</label>
+				<input type="file" placeholder="Select Image" name="imageProduct" id="imageProduct">
+				<input type="submit" value="Add">
+</form>
+	</div>
+</body>
+</html>

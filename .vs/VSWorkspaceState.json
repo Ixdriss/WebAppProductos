@@ -1,6 +1,14 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Controllers",
+    "\\Images",
+    "\\Images\\LogIn",
+    "\\obj",
+    "\\Properties",
+    "\\Views",
+    "\\Views\\Home",
+    "\\Views\\Product"
   ],
   "PreviewInSolutionExplorer": false
 }

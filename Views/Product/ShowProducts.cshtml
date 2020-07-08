@@ -1,0 +1,76 @@
+﻿@model IEnumerable<WebApplication1.Models.Product>
+
+@{
+	Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>Index</title>
+	<link rel="stylesheet" href="/static/master2.css">
+</head>
+<body>
+	<div class="login-box">
+		<form method="post" action="/Product/ShowProducts">
+			<table class="table" align="center">
+				<tr>
+					<th>
+						ID
+					</th>
+					<th>
+						Detalle
+					</th>
+					<th>
+						Precio
+					</th>
+					<th>
+						Categoria
+					</th>
+					<th>
+
+					</th>
+					<th>
+
+					</th>
+				</tr>
+
+				@foreach (var Product in Model)
+		{
+			<tr>
+				<td>
+					@Product.id_Product
+				</td>
+				<td>
+					@Product.name_Product
+				</td>
+				<td>
+					@Product.price_Product
+				</td>
+				<td>
+					@Product.categorie_Product
+				</td>
+				<td>
+					<a href="/Product/DeleteProduct?cod=@Product.id_Product" onclick="return confirm('Delete Product?');">Delete</a>
+				</td>
+				<td>
+					<a href="/Product/UpdateProduct?cod=@Product.id_Product">Update</a>
+				</td>
+			</tr>
+}
+
+			</table>
+			<a align="center" href="/Product/CreateProduct">NEW</a>
+			<p></p>
+			<a href="/Product/SearchCat?cod=1">Fruits</a>
+			<p></p>
+			<a href="/Product/SearchCat?cod=2">Vegetables</a>
+			<p></p>
+			<a href="/Product/SearchCat?cod=3">Meats</a>
+
+		</form>
+		</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿
+@{
+	ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>LogIn</title>
+
+	<link rel="stylesheet" href="/static/master.css">
+</head>
+<body>
+	<div class="login-box">
+		<img src="~/images/LogIn/UserID.png" class="avatar" alt="Avatar Image">
+		<h1>LogIn</h1>
+		<form method="post" action="/Home/SetProducts">
+			<label for="Username">Username</label>
+			<input type="text" placeholder="Enter Username" name="Username" id="Username">
+			<label for="Password">Password</label>
+			<input type="password" placeholder="Enter Password" name="Password" id="Password">
+			<input type="submit" value="LogIn">
+			<a href="/Home/CreateUser">SignUp</a>
+		</form>
+	</div>
+</body>
+</html>
+
